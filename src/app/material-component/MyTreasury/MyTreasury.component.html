@@ -1,6 +1,31 @@
 <mat-card>
 	<mat-card-content>    
-	<mat-card-title>Buttons</mat-card-title>
-	<table mat-table></table>
+	<mat-card-title>الورثة</mat-card-title>
+	<mat-table [dataSource]="dataSource">
+		<mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+		<mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+
+		<ng-container  matColumnDef="Name">
+			<mat-header-cell *matHeaderCellDef>الاسم</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor.Name}}</mat-cell>
+		</ng-container>
+
+		<ng-container  matColumnDef="NID">
+			<mat-header-cell *matHeaderCellDef>رقم الهوية</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor. NID}}</mat-cell>
+		</ng-container>
+
+		<ng-container  matColumnDef="Relation">
+			<mat-header-cell *matHeaderCellDef>العلاقة</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor.Relation}}</mat-cell>
+		</ng-container>
+
+		<ng-container  matColumnDef="Known">
+			<mat-header-cell *matHeaderCellDef>معرف</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor.Known}}</mat-cell>
+		</ng-container>
+
+	
+	</mat-table>
 	</mat-card-content>
 </mat-card>
