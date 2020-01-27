@@ -32,7 +32,11 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import { MyTreasuryComponent } from './MyTreasury/MyTreasury.component';
+import { InheretorsComponent } from '../inheretors/inheretors.component';
+import { MyFilesComponent } from './my-files/my-files.component';
 
+import { FileManagerModule, NavigationPaneService, ToolbarService, DetailsViewService } from '@syncfusion/ej2-angular-filemanager';
+import { TheWillComponent } from './the-will/the-will.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -42,11 +46,13 @@ import { MyTreasuryComponent } from './MyTreasury/MyTreasury.component';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    CdkTableModule
+    CdkTableModule,
+    FileManagerModule
   ],
-  providers: [],
+  providers: [NavigationPaneService, ToolbarService, DetailsViewService],
   entryComponents: [DialogOverviewExampleDialogComponent],
   declarations: [
+    InheretorsComponent,
     MyTreasuryComponent,
     ButtonsComponent,
     GridComponent,
@@ -64,7 +70,9 @@ import { MyTreasuryComponent } from './MyTreasury/MyTreasury.component';
     TooltipComponent,
     SnackbarComponent,
     SliderComponent,
-    SlideToggleComponent
+    SlideToggleComponent,
+    MyFilesComponent,
+    TheWillComponent
   ]
 })
 export class MaterialComponentsModule {}

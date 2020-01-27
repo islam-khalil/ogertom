@@ -17,6 +17,9 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import { MyTreasuryComponent } from './MyTreasury/MyTreasury.component';
+import { InheretorsComponent } from '../inheretors/inheretors.component';
+import { MyFilesComponent } from './my-files/my-files.component';
+import { TheWillComponent } from './the-will/the-will.component';
 
 export const MaterialRoutes: Routes = [
   {
@@ -27,6 +30,19 @@ export const MaterialRoutes: Routes = [
     path: 'my-treasury',
     component: MyTreasuryComponent
   },
+  {
+    path: 'my-files',
+    component: MyFilesComponent
+  },
+  {
+    path: 'the-will',
+    component: TheWillComponent
+  },
+  {
+    path: 'inheretors',
+    component: InheretorsComponent
+  },
+  
   {
     path: 'grid',
     component: GridComponent

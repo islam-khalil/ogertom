@@ -1,0 +1,64 @@
+<mat-card>
+
+
+    <mat-card-content>
+        <mat-card-title> الوصيه</mat-card-title>
+        <!-- ============================================================== -->
+        <!-- column -->
+        <!-- ============================================================== -->
+        <form class="basic-form">
+            <div fxLayout="row wrap">
+                <!-- column -->
+              
+            
+                <button (click)="fileInput.click()">
+                    <mat-icon>library_add</mat-icon>
+                    <span> تسجيل صوتي للوصية</span>
+                    <input #fileInput type="file" (change)="onFileInput($event)" style="display:none;" />
+                  </button>
+            
+            </div>
+        </form>
+    </mat-card-content>
+    
+    
+    </mat-card>
+    <mat-card>
+        <mat-card-content>
+            <mat-chip-list class="mat-chip-list-stacked" *ngIf="visible">
+                <mat-chip *ngFor="let aColor of availableColors"
+                         (focus)="color = aColor.color" color="{{aColor.color}}" selected="true">
+               تم التوثيق مع وزرة العدل
+                </mat-chip>
+              </mat-chip-list>
+
+
+            <mat-card-title> نص الوصيه </mat-card-title>
+            <form class="basic-form">
+                <div fxLayout="row wrap">
+                    <p>
+
+                   
+    بسم الله الرحمن الرحيم والصلاة والسلام على سيدنا محمد وعلى اله واصحابه اجمعين
+
+
+ نموذج الوصيــه الشرعية
+النموذج الأول
+
+بسم الله الرحمن الرحيم
+
+عَنْ عَبْدِاللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: "مَا حَقُّ امْرِئٍ مُسْلِمٍ لَهُ شَيْءٌ يُوصِي فِيهِ يَبِيتُ لَيْلَتَيْنِ إِلَّا وَوَصِيَّتُهُ مَكْتُوبَةٌ عِنْدَهُ." متفق عليه
+
+هذا ما أوصي به أنا العبد الفقير لله ........................
+
+                    </p>
+</div>
+  <!-- column -->
+  <div fxFlex.gt-sm="100" fxFlex="100">
+    <button mat-raised-button color="primary" (click)="add()" >توثيق</button>
+</div>
+            </form>
+</mat-card-content>
+    
+    
+</mat-card>

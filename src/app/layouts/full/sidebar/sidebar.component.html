@@ -1,14 +1,24 @@
 <!-- ============================================================== -->
 <!-- sidebar -->
 <!-- ============================================================== -->
- <div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">
+ <div class="user-profile" 
+ 
+ style="background: url(assets/images/logo.jpg) no-repeat;">
     <!-- User profile image -->
-    <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user"> </div>
+    <div class="profile-img">
+        
+        <!-- <img src="assets/images/users/profile.png" alt="user"> 
+     -->
+        <img id="comp-k4zpy5qzimgimage" style="object-position:50% 50%;width:80px;height:60px;object-fit:cover" alt="log.jpg" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/046895_aa9e5f8f33eb42d4bcc48c787e9deef1~mv2.jpg/v1/fill/w_160,h_120,al_c,q_80,usm_0.66_1.00_0.01/log.webp">
+
+    </div>
+
     <!-- User profile text-->
     <!-- ============================================================== -->
     <!-- Profile - style you can find in header.scss -->
     <!-- ============================================================== -->
-    <div class="profile-text"><a [matMenuTriggerFor]="sdprofile" class=""> Markarn Doe <i class="ti-angle-down font-12 m-l-5"></i></a></div>
+    <div class="profile-text"><a [matMenuTriggerFor]="sdprofile" 
+        class=""> خالد الزامل <i class="ti-angle-down font-12 m-l-5"></i></a></div>
     <mat-menu #sdprofile="matMenu" class="mymegamenu">
         <button mat-menu-item>
             <mat-icon>settings</mat-icon> Settings </button>

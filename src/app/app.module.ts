@@ -18,6 +18,7 @@ import { DemoMaterialModule } from './demo-material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { SpinnerComponent } from './shared/spinner.component';
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { SpinnerComponent } from './shared/spinner.component';
     HttpClientModule,
     SharedModule,
     RouterModule.forRoot(AppRoutes)
+    
   ],
   providers: [
     {

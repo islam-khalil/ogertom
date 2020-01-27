@@ -1,31 +1,133 @@
-<mat-card>
-	<mat-card-content>    
-	<mat-card-title>الورثة</mat-card-title>
-	<mat-table [dataSource]="dataSource">
-		<mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
-		<mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
 
-		<ng-container  matColumnDef="Name">
-			<mat-header-cell *matHeaderCellDef>الاسم</mat-header-cell>
-			<mat-cell *matCellDef="let inheretor">{{inheretor.Name}}</mat-cell>
-		</ng-container>
 
-		<ng-container  matColumnDef="NID">
-			<mat-header-cell *matHeaderCellDef>رقم الهوية</mat-header-cell>
-			<mat-cell *matCellDef="let inheretor">{{inheretor. NID}}</mat-cell>
-		</ng-container>
+<!-- ============================================================== -->
+<!-- Image Card row-->
+<!-- ============================================================== -->
+<div fxLayout="row wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-lg="50" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card class="oh text-center little-profile">
+            <img mat-card-image src="assets/images/background/profile-bg.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <div class="pro-img">
+                    <img src="assets/images/users/1.jpg" width="100" alt="user" class="img-circle">
+                </div>
+                <h3 class="m-b-0">الورثة</h3>
+                <h6 class="m-t-0 ">الورثة المسجلين في ابشر و الغير معروفين</h6>
+                <mat-card-actions>
+                    <button mat-raised-button color="warn"  routerLink="/inheretors" >سجلهم</button>
+                </mat-card-actions>
+                <div fxLayout="row" fxLayoutWrap="wrap" class="m-t-30">
+                    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
+                        <h3 class="m-0 font-light">4</h3>
+                        <small>ابن</small>
+                    </div>
+                    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
+                        <h3 class="m-0 font-light">2</h3>
+                        <small>اخ</small>
+                    </div>
+                    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
+                        <h3 class="m-0 font-light">1</h3>
+                        <small>زوجة</small>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
 
-		<ng-container  matColumnDef="Relation">
-			<mat-header-cell *matHeaderCellDef>العلاقة</mat-header-cell>
-			<mat-cell *matCellDef="let inheretor">{{inheretor.Relation}}</mat-cell>
-		</ng-container>
+		<mat-card class="oh text-center little-profile">
 
-		<ng-container  matColumnDef="Known">
-			<mat-header-cell *matHeaderCellDef>معرف</mat-header-cell>
-			<mat-cell *matCellDef="let inheretor">{{inheretor.Known}}</mat-cell>
-		</ng-container>
-
+			<mat-card-content>
+				<!-- <div >
+					<img src="assets/images/mony.jpeg" width="100" >
+				</div> -->
+				<h3 class="m-b-0">الوصية</h3>
+				<h6 class="m-t-0 ">  ما حقُّ امرئٍ مسلمٍ له شيءٌ يوصي فيه . يبيتُ ثلاثَ ليالٍ إلا ووصيتُه عنده مكتوبةٌ </h6>
+				<mat-card-actions>
+					<button mat-raised-button color="primary"  routerLink="/the-will" >سجل وصيتك</button>
+				</mat-card-actions>
+			
+			</mat-card-content>
+		</mat-card>
+	</div>
 	
-	</mat-table>
-	</mat-card-content>
-</mat-card>
+    <div fxFlex.gt-lg="50" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
+	<mat-card class="oh text-center ">
+		<!-- <img mat-card-image src="assets/images/secret.png" alt="Photo of a Shiba Inu"> -->
+		<mat-card-content>
+			<div >
+				<img src="assets/images/Arch_File_Folders.png" width="100" >
+			</div>
+			<h3 class="m-b-0">ملفات</h3>
+			<h6 class="m-t-0 ">   ادارة الملفات الهامة </h6>
+		    <mat-card-actions>
+				<button mat-raised-button color="primary"  routerLink="/my-files" >تصفح</button>
+			</mat-card-actions>
+			<div fxLayout="row" fxLayoutWrap="wrap" class="m-t-20">
+				<div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
+					<h3 class="m-0 font-light">200</h3>
+					<small>مستندات</small>
+				</div>
+				<div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
+					<h3 class="m-0 font-light">500</h3>
+					<small>صور</small>
+				</div>
+				<div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
+					<h3 class="m-0 font-light">10</h3>
+					<small>صوت</small>
+				</div>
+			</div>
+		</mat-card-content>
+	</mat-card>
+
+
+	<mat-card>
+		<div class="p-20 bg-info position-relative">
+		
+
+			<h4 class="card-title text-white m-0">الديون</h4>
+			<h6 class="card-subtitle text-white m-0 op-5">تسجيل وتوثيق الديون<</h6>
+			<button mat-mini-fab color="accent" class="add-contact">+</button>
+		</div>
+		<div class="message-box contact-box p-20">
+			<div class="message-widget contact-widget">
+				<!-- Message -->
+				<a href="#">
+					<div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user"
+							class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+					<div class="mail-contnet">
+						<h5>محمد الشهري</h5> <span class="mail-desc">٢٠٠٠ ريال</span>
+					</div>
+				</a>
+				<!-- Message -->
+				<a href="#">
+					<div class="user-img"> <span class="round">A</span> <span
+						class="profile-status away pull-right"></span> </div>
+							<div class="mail-contnet">
+						<h5>علي الوادعي</h5> <span class="mail-desc">٣٠٠٠٠ ريال</span>
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</mat-card>
+
+
+	<!-- <mat-card class="oh text-center little-profile">
+		<img mat-card-image src="assets/images/mony.jpeg" alt="Photo of a Shiba Inu">
+		<mat-card-content>
+		
+			<h3 class="m-b-0">الديون</h3>
+			<h6 class="m-t-0 ">  تسجيل وتوثيق الديون</h6>
+		    <mat-card-actions>
+				<button mat-raised-button color="primary"  routerLink="/my-files" >ابدأ</button>
+			</mat-card-actions>
+		
+		</mat-card-content>
+	</mat-card> -->
+
+</div>
+
+    <!-- Card column -->
+    <!-- Card column -->
+  
+</div>

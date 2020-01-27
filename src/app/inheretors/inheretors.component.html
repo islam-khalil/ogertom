@@ -1,0 +1,84 @@
+<mat-card>
+	<mat-card-content>    
+	<mat-card-title>الورثة</mat-card-title>
+	<mat-table [dataSource]="dataSource">
+		<mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+        <mat-row  [ngClass]="{'highlight': '1410101010' == row.NID}"
+
+        
+         *matRowDef="let row; columns: tableColumns"></mat-row>
+
+		<ng-container  matColumnDef="Name">
+			<mat-header-cell *matHeaderCellDef>الاسم</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor.Name}}</mat-cell>
+		</ng-container>
+
+		<ng-container  matColumnDef="NID">
+			<mat-header-cell *matHeaderCellDef>رقم الهوية</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor. NID}}</mat-cell>
+		</ng-container>
+
+		<ng-container  matColumnDef="Relation">
+			<mat-header-cell *matHeaderCellDef>العلاقة</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor.Relation}}</mat-cell>
+		</ng-container>
+
+		<ng-container  matColumnDef="Known">
+			<mat-header-cell *matHeaderCellDef>معرف</mat-header-cell>
+			<mat-cell *matCellDef="let inheretor">{{inheretor.Known}}</mat-cell>
+		</ng-container>
+
+	
+	</mat-table>
+	</mat-card-content>
+</mat-card>
+<mat-card>
+<mat-card-content>
+    <mat-card-title>وريث جديد</mat-card-title>
+    <!-- ============================================================== -->
+    <!-- column -->
+    <!-- ============================================================== -->
+    <form class="basic-form">
+        <div fxLayout="row wrap">
+            <!-- column -->
+            <div fxFlex.gt-sm="100" fxFlex="100">
+                <mat-form-field>
+                    <input matInput placeholder="الاسم">
+                </mat-form-field>
+            </div>
+            <!-- column -->
+            <div fxFlex.gt-sm="100" fxFlex="100">
+                <mat-form-field>
+                    <input matInput placeholder="الهوية" type="email">
+                </mat-form-field>
+            </div>
+          
+
+            <!-- column -->
+            <div fxFlex.gt-sm="100" fxFlex="100">
+                <mat-form-field>
+                    <mat-select placeholder="العلاقة">
+                        <mat-option value="option">ابن</mat-option>
+                        <mat-option value="option">بنت</mat-option>
+                        <mat-option value="option">زوجة</mat-option>
+                     
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <!-- column -->
+            <div fxFlex.gt-sm="100" fxFlex="100">
+                <mat-form-field>
+                    <textarea matInput placeholder="وصف"></textarea>
+                </mat-form-field>
+            </div>
+            <!-- column -->
+            <div fxFlex.gt-sm="100" fxFlex="100">
+                <button mat-raised-button color="primary" (click)="add()" >اضافة</button>
+            </div>
+        </div>
+    </form>
+</mat-card-content>
+
+
+</mat-card>
