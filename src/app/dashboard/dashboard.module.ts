@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 import { ChartistModule } from 'ng-chartist';
+import { MyTreasuryComponent } from '../material-component/MyTreasury/MyTreasury.component';
 
 @NgModule({
   imports: [

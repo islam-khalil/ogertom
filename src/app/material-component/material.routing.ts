@@ -20,6 +20,9 @@ import { MyTreasuryComponent } from './MyTreasury/MyTreasury.component';
 import { InheretorsComponent } from '../inheretors/inheretors.component';
 import { MyFilesComponent } from './my-files/my-files.component';
 import { TheWillComponent } from './the-will/the-will.component';
+import { OgertomStoreComponent } from './ogertom-store/ogertom-store.component';
+import { ServiceListComponent } from './service-list/service-list.component';
+import { GuideLinesComponent } from './guide-lines/guide-lines.component';
 
 export const MaterialRoutes: Routes = [
   {
@@ -42,7 +45,26 @@ export const MaterialRoutes: Routes = [
     path: 'inheretors',
     component: InheretorsComponent
   },
+  {
+    path: 'guide-lines',
+    component: GuideLinesComponent
+  },
   
+  {
+    path: 'service-list',
+    component: ServiceListComponent
+  },
+  
+  {
+    path: 'ogertom-store',
+    component: OgertomStoreComponent
+  },
+  
+  {
+    path: 'inheretors',
+    component: InheretorsComponent
+  },
+ 
   {
     path: 'grid',
     component: GridComponent

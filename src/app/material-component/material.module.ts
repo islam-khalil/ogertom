@@ -37,6 +37,9 @@ import { MyFilesComponent } from './my-files/my-files.component';
 
 import { FileManagerModule, NavigationPaneService, ToolbarService, DetailsViewService } from '@syncfusion/ej2-angular-filemanager';
 import { TheWillComponent } from './the-will/the-will.component';
+import { OgertomStoreComponent } from './ogertom-store/ogertom-store.component';
+import { ServiceListComponent } from './service-list/service-list.component';
+import { GuideLinesComponent } from './guide-lines/guide-lines.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -72,7 +75,10 @@ import { TheWillComponent } from './the-will/the-will.component';
     SliderComponent,
     SlideToggleComponent,
     MyFilesComponent,
-    TheWillComponent
+    TheWillComponent,
+    OgertomStoreComponent,
+    ServiceListComponent,
+    GuideLinesComponent
   ]
 })
 export class MaterialComponentsModule {}
