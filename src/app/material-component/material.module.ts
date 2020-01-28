@@ -31,7 +31,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
-import { MyTreasuryComponent } from './MyTreasury/MyTreasury.component';
+import { MyTreasuryComponent, DialogOverviewExampleDialogComponent1 } from './MyTreasury/MyTreasury.component';
 import { InheretorsComponent } from '../inheretors/inheretors.component';
 import { MyFilesComponent } from './my-files/my-files.component';
 
@@ -53,7 +53,7 @@ import { GuideLinesComponent } from './guide-lines/guide-lines.component';
     FileManagerModule
   ],
   providers: [NavigationPaneService, ToolbarService, DetailsViewService],
-  entryComponents: [DialogOverviewExampleDialogComponent],
+  entryComponents: [DialogOverviewExampleDialogComponent,DialogOverviewExampleDialogComponent1],
   declarations: [
     InheretorsComponent,
     MyTreasuryComponent,
@@ -70,6 +70,7 @@ import { GuideLinesComponent } from './guide-lines/guide-lines.component';
     ProgressComponent,
     DialogComponent,
     DialogOverviewExampleDialogComponent,
+    DialogOverviewExampleDialogComponent1,
     TooltipComponent,
     SnackbarComponent,
     SliderComponent,

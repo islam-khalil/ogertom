@@ -1,1 +1,62 @@
-<p>فزعة</p>
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>طلب خدمة سريعة</mat-card-title>
+
+        <mat-card-subtitle> سيتم توفير اقرب واسرع مقدم خدمة لك </mat-card-subtitle>
+        <mat-horizontal-stepper [linear]="isLinear">
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>ادخال البيانات   </ng-template>
+                    <div #gmap style="width:100%;height:400px"></div>
+
+                    <div fxLayout="row wrap">
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="الاسم">
+                            </mat-form-field>
+                        </div>
+
+                        <!-- column -->
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="الهوية">
+                            </mat-form-field>
+                        </div>
+
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                            <mat-form-field>
+                                <input matInput placeholder="رقم التواصلے">
+                            </mat-form-field>
+                        </div>
+                        <!-- column -->
+                   
+                        <div>
+                            <button mat-raised-button color="warn" matStepperNext>طلب الخدمة</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>جاري خدمتك</ng-template>
+                <h2>   سيتم وضع عرض تفصيلي لخطوات الخدمة </h2>
+                <h4>  مع توضيح الخطوة الفعالة حاليا </h4>
+                    <div>
+                    
+                        <button mat-raised-button color="warn" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>تم</ng-template>
+                <h2>  التكامل مع خدمات السداد الالكتروني </h2>
+                <div>
+                    <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </mat-card-content>
+
+
+</mat-card>

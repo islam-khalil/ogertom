@@ -1,1 +1,76 @@
-<p> ارشادات</p>
+<div fxLayout="row wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-lg="50" fxFlex.gt-md="50" fxFlex.gt-xs="100" fxFlex="100">
+
+<mat-card>
+	<mat-card-content>    
+    <mat-card-title>الجنسية</mat-card-title>
+
+    <mat-button-toggle-group #groupNationality="matButtonToggleGroup">
+        <mat-button-toggle value="سعودي">
+            <button mat-mini-fab color="primary">سعودي</button>
+        </mat-button-toggle>
+        <mat-button-toggle value="مقيم">
+       
+<button mat-mini-fab color="accent">مقيم</button>
+        </mat-button-toggle>
+        <mat-button-toggle value="زائر">
+       
+<button mat-mini-fab color="warn">زائر</button>
+        </mat-button-toggle>
+
+    </mat-button-toggle-group>
+    <div class="m-t-20" *ngIf="groupNationality.value">اخترت: {{groupNationality.value}}</div> 
+
+    </mat-card-content>
+</mat-card>
+    </div>
+<div fxFlex.gt-lg="50" fxFlex.gt-md="50" fxFlex.gt-xs="100" fxFlex="100">
+
+        <mat-card>
+	<mat-card-content>    
+    <mat-card-title>حالة الوفاة </mat-card-title>
+
+    <mat-button-toggle-group #groupLocation="matButtonToggleGroup">
+        <mat-button-toggle value="مستشفي">
+            <button mat-mini-fab color="primary">مستشفي</button>
+        </mat-button-toggle>
+        <mat-button-toggle value="البيت">
+       
+<button mat-mini-fab color="accent">البيت</button>
+        </mat-button-toggle>
+        <mat-button-toggle value="حادث">
+       
+<button mat-mini-fab color="warn">حادث</button>
+        </mat-button-toggle>
+
+    </mat-button-toggle-group>
+    <div class="m-t-20" *ngIf="groupLocation.value">اخترت: {{groupLocation.value}}</div> 
+
+    </mat-card-content>
+</mat-card>
+
+ 
+</div>
+</div>
+<div fxLayout="row wrap" *ngIf="groupLocation.value&&groupNationality.value">
+    <!-- Card column -->
+    <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
+
+<mat-card>
+	<mat-card-content>    
+    <mat-card-title>الاجراءات الواجب اتباعها</mat-card-title>
+    <ul>
+        <li> استخراج شهادة وفاة حسب النموذج المعد لذلك الصادر عن وزارة الصحة موقع من طبيب المستوصف أو المستشفى الحكومي أو المستوصف الاهلي ثم يصدق من المكتب الصحي</li>
+        <li>تم استخراج تصريح الدفن بموجب شهادة الوفاة ويوقع عليه من قبل الموظف المختص ويختم بالختم الرسمي ويبين فيه رقم وتاريخ شهادة الوفاة</li>   
+        <li> الجهات التي تقوم باصدار تصريح الدفن</li>
+    </ul>
+    <mat-card-actions>
+  
+        <button mat-raised-button color="primary" routerLink="/service-list" >فزعة</button>
+    </mat-card-actions>
+</mat-card-content>
+</mat-card>
+    </div>
+</div>
+

@@ -86,7 +86,7 @@
 
 			<h4 class="card-title text-white m-0">الديون</h4>
 			<h6 class="card-subtitle text-white m-0 op-5">تسجيل وتوثيق الديون<</h6>
-			<button mat-mini-fab color="accent" class="add-contact">+</button>
+			<button mat-mini-fab color="accent" (click)="openDialog()"  class="add-contact">+</button>
 		</div>
 		<div class="message-box contact-box p-20">
 			<div class="message-widget contact-widget">
@@ -100,7 +100,8 @@
 				</a>
 				<!-- Message -->
 				<a href="#">
-					<div class="user-img"> <span class="round">A</span> <span
+					<div class="user-img"> <span class="round">A</span>
+						 <span
 						class="profile-status away pull-right"></span> </div>
 							<div class="mail-contnet">
 						<h5>علي الوادعي</h5> <span class="mail-desc">٣٠٠٠٠ ريال</span>
