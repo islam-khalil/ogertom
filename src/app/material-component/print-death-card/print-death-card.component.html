@@ -1,0 +1,44 @@
+
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>       طباعة إفادة الوفاة</mat-card-title>
+        <!-- ============================================================== -->
+        <!-- column -->
+        <!-- ============================================================== -->
+        <form class="basic-form">
+            <div fxLayout="row wrap">
+                <!-- column -->
+                <div fxFlex.gt-sm="100" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput placeholder="رقم هوية مقدم الطلب">
+                    </mat-form-field>
+                </div>
+                <!-- column -->
+                <div fxFlex.gt-sm="100" fxFlex="100">
+                    <mat-form-field>
+                        <input matInput placeholder="رقم هوية  المتوفي">
+                    </mat-form-field>
+                </div>
+              
+    
+                <!-- column -->
+                <div fxFlex.gt-sm="100" fxFlex="100">
+                    <mat-form-field>
+                        <mat-select placeholder="العلاقة">
+                            <mat-option value="option">ابن</mat-option>
+                            <mat-option value="option">بنت</mat-option>
+                            <mat-option value="option">زوجة</mat-option>
+                         
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+    
+           
+                <!-- column -->
+                <div fxFlex.gt-sm="100" fxFlex="100">
+                    <button mat-raised-button color="primary" >متابعة</button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+    

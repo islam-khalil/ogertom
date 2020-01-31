@@ -23,12 +23,28 @@ import { TheWillComponent } from './the-will/the-will.component';
 import { OgertomStoreComponent } from './ogertom-store/ogertom-store.component';
 import { ServiceListComponent } from './service-list/service-list.component';
 import { GuideLinesComponent } from './guide-lines/guide-lines.component';
+import { HomeComponent } from './home/home.component';
+import { GovServicesComponent } from './gov-services/gov-services.component';
+import { PrintDeathCardComponent } from './print-death-card/print-death-card.component';
 
 export const MaterialRoutes: Routes = [
   {
     path: 'button',
     component: ButtonsComponent
   },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'gov-services',
+    component: GovServicesComponent
+  },
+  {
+    path: 'print-death-card',
+    component: PrintDeathCardComponent
+  },
+
   {
     path: 'my-treasury',
     component: MyTreasuryComponent
@@ -49,22 +65,22 @@ export const MaterialRoutes: Routes = [
     path: 'guide-lines',
     component: GuideLinesComponent
   },
-  
+
   {
     path: 'service-list',
     component: ServiceListComponent
   },
-  
+
   {
     path: 'ogertom-store',
     component: OgertomStoreComponent
   },
-  
+
   {
     path: 'inheretors',
     component: InheretorsComponent
   },
- 
+
   {
     path: 'grid',
     component: GridComponent

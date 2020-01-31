@@ -9,7 +9,7 @@ export const AppRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/my-treasury',
+        redirectTo: '/home',
         pathMatch: 'full'
       },
       {

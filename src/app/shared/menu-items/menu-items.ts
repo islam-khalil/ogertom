@@ -8,10 +8,13 @@ export interface Menu {
 }
 
 const MENUITEMS = [
+  { state: 'home', name: 'الرذيسية', type: 'link', icon: 'home' },
   { state: 'my-treasury', name: 'خزنتي', type: 'link', icon: 'av_timer' },
   { state: 'guide-lines', name: 'ارشادات', type: 'link', icon: 'crop_7_5' },
   { state: 'service-list', name: 'فزعة', type: 'link', icon: 'view_comfy' },
-  { state: 'ogertom-store', name: 'سوق اجرتم', type: 'link', icon: 'vignette' }
+  { state: 'ogertom-store', name: 'سوق اجرتم', type: 'link', icon: 'vignette' },
+  { state: 'gov-services', name: 'خدمات', type: 'link', icon: 'vignette' },
+
 
   // ,{ state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
   // { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },

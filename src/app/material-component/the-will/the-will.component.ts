@@ -23,4 +23,7 @@ export class TheWillComponent implements OnInit {
   {
     this.visible=true;
   }
+  onFileInput(v){
+
+  }
 }

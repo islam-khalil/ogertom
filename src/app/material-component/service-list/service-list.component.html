@@ -7,16 +7,34 @@
             <mat-step [stepControl]="firstFormGroup">
                 <form [formGroup]="firstFormGroup">
                     <ng-template matStepLabel>ادخال البيانات   </ng-template>
-                    <div #gmap style="width:100%;height:400px"></div>
-
+             
+              
+             
+               
                     <div fxLayout="row wrap">
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                    
+                            <mat-checkbox> تخليص اجراءات</mat-checkbox>
+                            <hr>
+                            <mat-checkbox> غسل</mat-checkbox>
+                            <hr>
+                            <mat-checkbox> كفن</mat-checkbox>
+                            <hr>
+                            <mat-checkbox> دفن</mat-checkbox>
+                            <hr>
+                            <mat-checkbox> قاعة عزاء</mat-checkbox>
+                       
+                        </div>
+                        <div #gmap style="width:100%;height:400px"></div>
+                      
                         <!-- column -->
                         <div fxFlex.gt-sm="100" fxFlex="100">
                             <mat-form-field>
                                 <input matInput placeholder="الاسم">
                             </mat-form-field>
                         </div>
-
+                      
+                      
                         <!-- column -->
                         <div fxFlex.gt-sm="100" fxFlex="100">
                             <mat-form-field>
